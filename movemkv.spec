@@ -1,11 +1,11 @@
 Name:           movemkv
-Version:        0.1.1
+Version:        0
 Release:        1%{?dist}
 Summary:        A small utility for moving certain MKV files.
 
 License:        GPLv3
 URL:            https://github.com/iAmSomeone2/movemkv
-Source0:        https://github.com/iAmSomeone2/%{name}-alpha/archive/v%{version}.tar.gz
+Source0:        https://github.com/iAmSomeone2/%{name}/archive/v%{version}.tar.gz
 
 BuildRequires:  clang, cmake, make    
 
@@ -24,12 +24,13 @@ make %{?_smp_mflags}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+cd build
 %make_install
 
 
 %files
 %license LICENSE
-%{_bindir}/%{name}/%{name}
+/usr/local/bin/%{name}/%{name}
 
 
 
