@@ -12,3 +12,7 @@ add_executable(movemkv movemkv.cxx movemkv.hxx)
 target_link_libraries(movemkv PUBLIC Threads::Threads)
 target_compile_options(movemkv PRIVATE -Wall)
 target_compile_features(movemkv PUBLIC cxx_auto_type cxx_range_for)
+
+# Deal with installation
+include(GNUInstallDirs)
+install(TARGETS movemkv RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}/movemkv)
