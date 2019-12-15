@@ -1,0 +1,7 @@
+# IDE dirs
+**/.idea/
+**/.vscode/
+
+# Build dirs
+**/[Cc]make-[Bb]uild-[Dd]ebug/
+**/[Cc]make-[Bb]uild-[Rr]elease/
